@@ -1,0 +1,49 @@
+{
+  "cli": {
+    "version": ">= 16.0.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "preview": {
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease",
+        "resourceClass": "medium"
+      },
+      "distribution": "internal",
+      "cache": {
+        "disabled": false
+      },
+      "node": "20.18.0",
+      "env": {
+        "NODE_ENV": "production",
+        "EXPO_PUBLIC_DOMAIN": "97f8b209-9c54-425f-acd4-9a08e28660c3-00-1s536kgmeip6u.kirk.replit.dev"
+      }
+    },
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "resourceClass": "medium"
+      },
+      "node": "20.18.0",
+      "cache": {
+        "disabled": false
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle",
+        "resourceClass": "medium"
+      },
+      "node": "20.18.0",
+      "cache": {
+        "disabled": false
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
